@@ -1,0 +1,347 @@
+---
+title: "Workshop: Automation with Make.com"
+format:
+  html:
+    toc: true
+author: "The Graph Courses Team"
+---
+
+# Introduction
+
+In this workshop, you'll create an automated workflow using Make.com that processes consultation inquiries submitted through a Google Form. The automation will:
+
+1.  Monitor a Google Form for new submissions
+2.  Use an AI model to research the potential client's company and generate a report
+3.  Create a formatted Google Doc with the research findings
+
+The goal here is to build an extremely simple automation that demonstrates the power of connecting different web services with an AI Large Language Model (LLM). Setting up this automation is quite a bit of work, but the beauty of automations of course is that (in theory) you should only need to set it up once!
+
+In the wild, you will find much more complex automations. Many organizations run a large fraction of their processes using automations on services like Make.com. With the rise of LLMs, these automations can do increasingly complex tasks.
+
+# Part 1: Setting Up Your Google Form and Data Collection
+
+## Create Your Project Folder
+
+1.  In your browser, navigate to [drive.google.com](https://drive.google.com/){target="_blank"}
+2.  Click **New** at the top left → then click **New folder**
+3.  Name the folder something like `GenAI Consultations`
+4.  Double-click to open the folder
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-06-06/6e163120-758c-4186-b7f3-be06417a2cd6/File.jpeg?tl_px=0,0&br_px=1376,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=337,171){width="619"}
+
+## Build Your Consultation Form
+
+1.  Inside the folder, again click **New** then click on **Google Forms** to create a new form.
+
+2.  In the title field enter: `Consultation Inquiry`
+
+3.  Set up the following form questions:
+
+    -   **Question 1:** "Name" (Short answer)
+    -   **Question 2:** "Email" (Short answer)
+    -   **Question 3:** "What is your company name and primary geographic area?" (Short answer)
+    -   **Question 4:** "What would you like help with?" (Paragraph)
+
+![](images/consultation_form.jpg){width="525"}
+
+4.  When done, click **Publish** at the top right to make your form live.
+
+## Test Your Form and Connect to Sheets
+
+1.  Click the Share button at the top right, then copy the responder link.
+
+2.  Paste that link into a new tab to open the form and submit a test response. You are encouraged to fill in data for an organization you know and care about. Here is an example:
+
+    -   Name: `John Doe`
+    -   Email: `john.doe@example.com`
+    -   Company: `The Graduate Institute, Geneva`
+    -   Help needed: `General advice on how to use GenAI to help students`
+
+3.  Return to the form editor tab and click **Responses**. This will show you the responses to your form. You should see a new response in the list.
+
+4.  Click **Link to Sheets** → **Create** to generate a connected spreadsheet.
+
+5.  Share the spreadsheet by clicking **Share** in the top right → **Copy link**. Copy this link to your clipboard. We will use it in the next section.
+
+------------------------------------------------------------------------
+
+# Part 2: Setting Up Make.com Automation
+
+## Build Your First Module: Google Sheets Watcher
+
+1.  If you have not yet done so, create a Make.com account. Once done, navigate to [https://www.make.com/en](https://www.make.com/en){target="_blank"} and sign in.
+
+2.  Click **Create a new scenario**. This may also be called "Create scenario" or "New scenario".
+
+![](https://ajeuwbhvhr.cloudimg.io/https://colony-recorder.s3.amazonaws.com/files/2025-06-06/2a6e92d6-c1a2-4737-93dd-ae062ef61780/File.jpeg?tl_px=148,0&br_px=1525,769&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=962,5){width="455"}
+
+3.  Click the plus button to add a new module, and select **Google Sheets**
+
+![](images/scenario_new_row.jpg){width="356"}
+
+4.  Choose **Watch New Rows ACID**. This will watch for new rows in the spreadsheet, and trigger when someone fills out the connected form.
+
+5.  Click **Creating a connection...** → **Sign in with Google**
+
+6.  You may need to select your Google account and authorize access. Give all requested permissions. (Note that you it is only *your* automations that have the access, not the entire Make.com service, so you do not need to worry about data security or leakage.)
+
+7.  Now, configure the module settings:
+
+    -   **Spreadsheet ID:** Navigate to and select your consultation form spreadsheet. It should be called something like Consultation Inquiry.
+    -   **Sheet name:** Select "Form Responses 1"
+    -   **Limit:** Set to `1` (processes one response at a time)
+    -   Click **Save**
+    -   If asked where to start, enter `1` into the id field → **Save**
+
+![](images/sheets_boxes.jpg){width="26%"}
+
+### Test the Workflow
+
+Now to test the connection, you need to perform the steps below.
+
+1.  Right-click on the Google Sheets module
+2.  Click **"Choose where to start"**
+
+![](images/choose_where_to_start.jpg){width="200"} 
+
+
+3.  Enter `1` into the id field → **"Save"**
+
+Note: If you add a second test row during your testing, you would select `2`, and so on.
+
+
+![](images/test_id_1.jpg){width="291"} 
+
+
+4.  Click **"Run once"** at the bottom left
+
+![](images/run_once.jpg){width="288"}
+
+Note that you will need to do this every time you want to test your workflow.
+
+If you get no errors, the workflow is working properly. You will also see the data from the form in the spreadsheet.
+
+### Save your work
+
+Make does not save your work automatically. You need to click the **Save** icon at the bottom after major changes so that in case you refresh the page or lose connection, you do not lose your work.
+
+![](images/save_button.jpg){width="389"}
+
+------------------------------------------------------------------------
+
+# Part 3: Adding AI Research Capabilities
+
+## Set Up OpenRouter AI Module
+
+1.  Click the **+** button next to the Google Sheets module
+
+2.  Search for **OpenRouter** and select **Create a chat completion**
+
+![](images/openrouter_select.jpg){width="389"}
+
+3.  Click **Create a connection**, then under Connection Type, select **OpenRouter** (not OpenRouter Auth2) and enter the openrouter API key that was emailed to you some time ago.
+
+## Configure the AI Research Prompt
+
+1.  Under **Messages**, click **Add item**
+
+<!-- -->
+
+2.  In the **Content** field, paste a prompt that looks something like:
+
+```         
+A potential client has filled out a form on my website requesting generative AI consulting services. Research the company/organization below and create a clear, simple, and short HTML report that covers an introduction to the business as well as potential generative AI opportunities for their work.
+
+Use emojis, tables and lists for visual appeal while keeping your writing clear and concise.
+
+If you cannot find online information about the company, just indicate so.
+
+Do not include any prelude or postlude.
+
+Important: Citations and links should only be at the very end of the report, not inside the text!
+
+Now, here is the company name and geographic area from the form:
+```
+
+3.  Right after the prompt (in the same box), click into the text area, and the variable selector should come up. Choose the company name field from your Google Form (e.g., "What is your company name...")
+
+So each time someone fills out the form, the company name will be added to the prompt, and send to the AI model.
+
+<!-- -->
+
+4.  Set the **Role** field to **User**
+
+![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/b4b2b521-eb1d-4524-9efc-3f870e43364e/File.jpeg?tl_px=148,182&br_px=1525,952&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=833,329)
+
+5.  For the **Model** field, first click the "Map" dial, which will allow you to type in any model of your choice. Then in the box, paste in `openai/gpt-5-mini:online`.
+    -   The `online` suffix allows the model to search the internet. So even if the model does know about the company based on its training data, it can still search the internet to research, providing more comprehensive and current information. 
+
+![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/6e4b7179-b274-404a-afda-c350d6e7f45d/File.jpeg?tl_px=148,182&br_px=1525,952&force_format=jpeg&q=100&width=1120.0&wat=1&wat_opacity=0.7&wat_gravity=northwest&wat_url=https://colony-recorder.s3.us-west-1.amazonaws.com/images/watermarks/FB923C_standard.png&wat_pad=869,298)
+
+6.  Click **Save**
+
+### Test and Save Your Workflow
+
+Now that you have two modules, you should test the workflow again!
+
+1.  IMPORTANT: As you did before, right-click the Google Sheets module → **Choose where to start** → enter `1` into the id field → **Save**
+2.  Then click **Run once** at the bottom left to test the entire workflow
+3.  If you get no errors, then all is working fine.
+4.  Click the Save icon in the bottom toolbar to save your work.
+
+------------------------------------------------------------------------
+
+# Part 4: Creating Google Docs Reports
+
+## Set Up Google Docs Module
+
+1.  Click the **+** button to add another module
+2.  Search for **Google Docs** and select **Create a document**
+
+![](images/create_docs_module.jpg){width="425"}
+
+3.  For the document **Name**, type: `GenAI Web Report for` then select the company name/geographic area variable from your form
+
+![](images/report_form_name.jpg){width="425"}
+
+4.  For the **Content** field, select the AI response from the variable picker:
+    -   Navigate to OpenRouter variables → **Choices** → **Message** → **Content** and click on **Content**
+
+![](images/report_content_picker.jpg){width="425"}
+
+5.  Under **New document's location folder**, search for and select your "GenAI Consultations" folder
+6.  Click **Save**
+
+### Test and Save Workflow
+
+Run your complete workflow to test again.
+
+IMPORTANT: As you did before, right-click the Google Sheets module → **Choose where to start** → enter `1` into the id field → **Save**
+
+If you get no errors, then all is working fine. Click the Save icon in the bottom toolbar to save your work. 
+
+Check your Google Drive for the newly created report document. If you're unhappy with the report, try editing the prompt and rerunning your test until you get an output that works.
+
+------------------------------------------------------------------------
+
+# Part 5: Activating Your Automation
+
+Congratulations! You've now built a complete automation that will process new form submissions automatically! Let's make it live.
+
+## Set Schedule and Activate
+
+1.  Click the **Save** icon in the bottom toolbar to save your work.
+
+2.  Locate the toggle beside the **Every 15 minutes** text, and turn the automation on. 
+
+![](images/turn_on_automation.jpg){width="425"}
+
+Your automation is now live and will process new form submissions automatically. Leave the frequency at **every 15 minutes** for now—this will let you quickly verify that everything works end-to-end once the form is on your website. You'll reduce the frequency after testing.
+
+------------------------------------------------------------------------
+
+# Part 6: Embedding the Form in Your Website
+
+## Get the Embed Code
+
+1.  Return to your Google Form
+2.  Click the three-dot menu (⋮) in the top right
+3.  Select **Embed**
+4.  Copy the provided HTML embed code
+
+![](https://colony-recorder.s3.amazonaws.com/files/2025-06-06/390e2496-d4ca-4073-a977-ff9a638f18ff/File.webp)
+
+## Add to Your Portfolio Website
+
+You'll use an LLM to update your portfolio's HTML to include the consultation form, then push the changes to GitHub.
+
+### Step 1: Copy Your Current Website Code
+
+1.  Go to [github.com](https://github.com){target="_blank"}. Click on your profile icon at the top right, then click on **Your repositories**.
+
+    ![](images/github_repositories.jpg){width="324"}
+
+2.  Locate and click on your portfolio repository (it should be called something like `graph-ai-portfolio`).
+
+3.  Click on the `index.html` file.
+
+    ![](images/index_html.jpg){width="374"}
+
+4.  Copy all the code from the file using the **copy** button at the top right of the code view.
+
+    ![](images/copy_code_button.jpg){width="372"}
+
+### Step 2: Ask an LLM to Update the HTML
+
+1.  Go to ChatGPT, Gemini, or your preferred LLM.
+
+2.  Provide a prompt like the one below. Paste both your embed code (from the previous step) and your current `index.html` code into the prompt where indicated:
+
+```         
+I want to update my portfolio website to include a consultation form.
+
+Add a new section called "Contact for Consultation" and embed this Google Form:
+
+[PASTE YOUR GOOGLE FORM EMBED CODE HERE]
+
+Below is my current index.html code. Please return the FULL updated HTML file:
+
+[PASTE YOUR ENTIRE index.html CODE HERE]
+```
+
+3.  Review the LLM's output to make sure it looks reasonable (e.g., your existing content is still there and a new section has been added).
+
+### Step 3: Update Your Website on GitHub
+
+1.  Back in your repository on GitHub, navigate to `index.html` and click the **edit file** (pencil) button at the top right.
+
+    ![](images/edit_file_button.jpg){width="452"}
+
+2.  Select all the existing code in the editor and delete it, then paste in the new HTML from the LLM.
+
+3.  Click the **Commit changes** button at the top right to save.
+
+4.  Your live site will update automatically. This may take 3–5 minutes. You can track the deployment status by clicking the **Actions** tab in your repository.
+
+    ![](images/actions_tab.jpg){width="380"}
+
+5.  Once the build completes, visit your GitHub Pages URL and confirm the consultation form section appears on your site. You may need to hard-refresh the page (Ctrl+Shift+R or Cmd+Shift+R) to bypass your browser's cache.
+
+    ![](images/pages_build.jpg){width="353"}
+
+## Test the Full Pipeline
+
+Now that your form is live on your website and the automation is active, it's time to test the entire pipeline from start to finish.
+
+1.  Visit your deployed GitHub Pages website and fill out the consultation form as if you were a real visitor. Use a different company name than your earlier test so you can easily identify the new submission.
+
+2.  Wait up to 15 minutes for the automation to pick up the new submission.
+
+3.  Go to your **GenAI Consultations** folder in Google Drive and confirm that a new report document has been created for the submission you just made. Open it and review the AI-generated report.
+
+If a new document appears, congratulations—your automation is working end-to-end, from a real website visitor all the way to a generated report!
+
+## Reduce the Checking Frequency
+
+Now that you've confirmed everything works, you should reduce how often the automation checks for new submissions. Each check counts as one **operation**, and Make.com's free plan provides approximately 1,000 operations per month. At every 15 minutes, you'd use up those operations in about 10 days—even if nobody submits the form.
+
+1.  Return to your scenario in Make.com
+2.  Click on the **Every 15 minutes** text (next to the on/off toggle) to open the scheduling settings
+3.  Change the interval to **every 3 hours** (or longer, depending on how quickly you need to respond to inquiries)
+4.  Click **Save**
+
+This way, the automation still runs automatically, but at a pace that is sustainable on the free plan.
+
+------------------------------------------------------------------------
+
+# Submission
+
+To submit your work:
+
+1.  Export and upload your scenario blueprint. At the top right, click the three dots and select **Export Blueprint**.
+
+![](images/export_blueprint.jpg){width="425"}
+
+This contains a file that represents your completed workflow. (This means if you wanted you could share, \[or sell!\] your workflows!)
+
+2.  Upload that file to the submission box on the course website.

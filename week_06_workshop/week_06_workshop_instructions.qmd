@@ -1,0 +1,207 @@
+---
+title: "Workshop 6: GenAI‑Assisted Design"
+format: 
+  html:
+    toc: true
+    embed-resources: true
+author: "The Graph Courses"
+---
+
+# Overviewweek 6 update
+
+In this session you will try two small but practical GenAI design workflows:
+
+1.  **Create a promotional flyer** for our course showcase using **Canva** for image generation and final editing.
+
+(You can share this flyer on your website or social media with colleagues and friends to get them to come to the showcase.)
+
+2.  (**Optional challenge**) **Turn a research paper into a visual abstract** using **Claude** and **HTML** or **SVG**.
+
+# Task 1 – AI Flyer for the Final Presentation
+
+**Account Required**: You'll need a free **Canva** account. Sign up at **canva.com** if you haven't already.
+
+### 1-A Sign up for Canva Pro Trial
+
+1.  Go to [canva.com](https://www.canva.com/){target="_blank"} and sign up for an account or log in.
+2.  Visit the Canva pricing page at [canva.com/pricing](https://www.canva.com/pricing/){target="_blank"}.
+3.  Switch from "Yearly" to "Monthly" billing.
+
+![Canva pricing page, monthly option](images/canva_monthly_pricing.jpg){width="380"}
+
+4.  Click on "Start my free trial" for the Pro plan.
+
+![Canva start free trial button](images/canva_start_free_trial.jpg){width="382"}
+
+5.  You will need to enter your credit card details to start the trial, but you won't be charged if you cancel before the trial period ends.
+
+6.  Once you have started the trial, go to your account settings and find "Billing & Teams" or visit [https://www.canva.com/settings/billing-and-teams](https://www.canva.com/settings/billing-and-teams){target="_blank"} and click "Cancel plan".
+
+![Canva cancel plan button](images/canva_cancel_plan.jpg){width="540"}
+
+7.  If you have previously used your free trial, you can create a new account with a different email address, or ask an instructor for assistance.
+
+### 1-B Generate Flyer Image in Canva
+
+1.  Navigate to the Canva home page by clicking the home icon or by visiting [canva.com](https://www.canva.com/){target="_blank"}.
+
+2.  In the main prompt box, select 'Canva AI', select 'Image', and set the aspect ratio to 3:4 for a more poster-like format. 
+
+![Canva prompt box options](images/prompt_box_options.jpg){width="547"}
+
+3.  In the prompt box, describe the image you want to create. You can copy and paste the recommended prompt below, or write your own. For color inspiration, check out [coolors.co](https://coolors.co/){target="_blank"}. Feel free to experiment with other aspects of the prompt.
+
+```         
+Create an elegant modern, abstract, minimalist flyer for the following event:
+► Main headline: "Generative AI for Work & Research – AI Portfolio Showcase Day".
+► Sub-headline: "Join us to see our cohort of AI learners are putting their skills to work".
+► Date and Time: Sunday, March 8, 5pm GMT or Wednesday, March 11, 3pm GMT
+► Our theme colors are light teal, dark teal, and yellow.
+► To sign up, visit https://forms.gle/n9Xf8ocLd6JtWXUZA
+
+```
+
+4. Press Enter to generate.
+
+### 1-C Fix typography
+
+AI-generated text in images can often be garbled or incorrect. Canva's "Grab Text" feature can make this text editable so you can fix any errors.
+
+1.  Hover over the image you want to use and click the "Edit photo" button.
+
+![Canva edit button](images/canva_edit_thumbnail.jpg){width="427"}
+
+2.  In the editing view, click the "Edit photo" button in the top left toolbar.
+
+![Canva edit photo button](images/canva_edit_photo_button.jpg){width="519"}
+
+3.  Under the "Magic Studio" tab, click on "Grab Text". You may need to scroll to the right to find it.
+
+![Canva Magic Studio Grab Text](images/canva_grab_text.jpg){width="491"}
+
+4.  Wait for the AI to process the image. Then, click "all text" then "Grab"
+
+![Canva grab all text confirmation](images/canva_grab_all_text.jpg){width="435"}
+
+5.  Now you can edit the text on your image.
+
+### Optional: Fix blemishes
+
+After using "Grab Text", you might see some leftover visual artifacts on the background. The "Magic Eraser" tool can help clean these up.
+
+1.  Select "Magic Eraser" from the "Magic Studio" tools.
+
+![Canva Magic Eraser tool](images/canva_magic_eraser.jpg){width="466"}
+
+2.  Adjust your brush size, paint over the blemishes, and watch them disappear.
+
+![Canva Magic Eraser brush adjustment](images/canva_magic_eraser_brush.jpg){width="508"}
+
+::: {.callout-tip title="Side Note"}
+You can also try the "Magic Edit" tool for more complex adjustments.
+
+For advanced photo editing beyond Canva's capabilities, [Photopea](https://www.photopea.com/){target="_blank"} is a great free, online alternative to Photoshop, though it has a steeper learning curve.
+:::
+
+### Optional: Add a QR code
+
+A QR code can make it easier for people to register for the showcase.
+
+1.  In the left-hand sidebar, click on "Apps".
+
+![Canva apps button on sidebar](images/canva_apps_sidebar.jpg){width="608"}
+
+2.  Search for "QR code" and select the official Canva QR code generator.
+3.  Enter the registration link: `https://forms.gle/n9Xf8ocLd6JtWXUZA` and add the QR code to your flyer.
+
+### 1-D Share & Upload
+
+1.  Click the "Share" button at the top right of the Canva editor.
+2.  Select "Download", keep the file type as PNG, and click "Download" again.
+3.  Upload the downloaded PNG file to the assignment submission area on the course website.
+
+# Task 2: Optional Challenge – AI Visual Abstracts
+
+In this section, we'll use AI and design tools to turn a research paper into a visual abstract. A visual abstract is a pictorial representation of the main findings of a research paper, and is a great way to communicate the key results of a paper in an appealing visual format.
+
+**Account Required**: You'll need a free **Claude.ai** account. Sign up at **claude.ai** if you haven't already.
+
+Other LLMs like ChatGPT and Gemini can also do this task, but we have found Claude consistently deliver better results.
+
+### 2-A Choose Your Paper
+
+Pick any recent research paper you are interested in and locate the title and abstract text. We use just the abstract rather than the full paper to avoid overwhelming the model with trying to visually represent too much information. You'll copy and paste these into Claude in the next step.
+
+### 2-B Generate Visual Abstract with Claude
+
+Go to **claude.ai** and log in to your account. Use Claude to create either an SVG or HTML-based "visual abstract" of your chosen paper.
+
+Choose one of the following two approaches (SVG or HTML) and give Claude the corresponding prompt. Feel free to try both approaches and compare the results.
+
+**Option 1: SVG Visual Abstract**
+
+```         
+Create a rich, accurate, and visually appealing SVG code-based visual abstract in landscape format, light mode, of the following paper:
+
+[Paper Title]
+[Paper Abstract]
+```
+
+**Option 2: HTML Visual Abstract**
+
+```         
+Create a rich, accurate, and visually appealing HTML visual abstract in landscape format, light mode, of the following paper:
+
+[Paper Title]
+[Paper Abstract]
+```
+
+After Claude generates the initial design, you can ask it to make specific changes or improvements to refine the visual abstract. "For example, make the subtitle larger, italics and use a different color/font."
+
+If you are happy with the design, you can take a screenshot and then upload it to your assignment submission area on the course page. The page should allow multiple submissions. (After you upload one file, simply repeat the process to upload another file.)
+
+### 2-C Edit and Finalize
+
+If you want to make some custom edits, you can do so in the following ways.
+
+**If you chose SVG:**
+
+1.  In Claude, click on the dropdown arrow at the top right of the SVG preview
+2.  Click on "Download SVG"
+
+![Download SVG in Claude](images/download_svg.jpg)
+
+3.  Open PowerPoint and drag the downloaded SVG file into a slide
+4.  To make the elements editable, you need to ungroup/convert the SVG:
+
+-   **For Mac users**: Right-click on the image, click on "Group", then "Ungroup". You may need to repeat this process several times until there's nothing left to ungroup.
+
+![Ungroup in Powerpoint for Mac](images/ungroup_mac.jpg)
+
+-   **For Windows users**: Right-click on the image and click on "Convert to shape".
+
+![Ungroup in Powerpoint for Windows](images/convert_to_shape_windows.png)
+
+5.  Some of the elements may have become malformed during the conversion process. You may therefore need to make some edits to individual elements
+
+6.  When finished, export as a PDF or take a screenshot of your slide
+
+**If you chose HTML:**
+
+1.  Copy the HTML code from Claude's response
+2.  Go to [https://app.grapesjs.com/studio](https://app.grapesjs.com/studio){target="_blank"} (a free visual HTML editor) and open the editor
+3.  Paste the HTML code into the editor
+4.  Use the visual interface to edit the design as needed
+5.  For detailed guidance on editing with GrapesJS, watch this video:
+
+<iframe src="https://player.vimeo.com/video/1092170358" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+6.  When you're satisfied with your design, take a screenshot of the final result.
+
+------------------------------------------------------------------------
+
+### 2-D Submit Your Work
+
+Upload your final visual abstract (PDF, screenshot, or exported file) to the comments section on the workshop page. Include a link to the original paper in your comment.
