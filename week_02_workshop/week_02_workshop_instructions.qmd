@@ -24,7 +24,7 @@ Note that rather than grading the technical precision of the report (we understa
 
 You will choose one of the following tools based on your coding experience:
 
--   **Students WITHOUT significant coding experience:** You will use **Julius**, a user-friendly AI data analysis tool with a chat interface.
+-   **Students WITHOUT significant coding experience:** You will use **ChatGPT**, a user-friendly AI chat tool, with its data analysis capabilities.
 
 -   **Students WITH significant coding experience in R:** You should use **Cursor**, an AI-powered code editor, with R.
 
@@ -35,9 +35,10 @@ You will choose one of the following tools based on your coding experience:
 # Part 1: General Setup & Data Selection (All Students)
 
 1.  **Choose Your Data:**
+
     -   Go to Gapminder's data repository: [https://gapminder.org/data](https://gapminder.org/data){target="_blank"}
     -   Browse the indicators and **decide on TWO indicators** of interest that you think might be related. See below for two key notes on choosing your indicators.
-    -   When you have decided on your two indicators, download the data as a CSV file for each indicator. 
+    -   When you have decided on your two indicators, download the data as a CSV file for each indicator.
 
     ![](images/gapminder_download_csv.jpg){width="378"}
 
@@ -51,75 +52,57 @@ You will choose one of the following tools based on your coding experience:
 
 Please follow the instructions for the tool assigned to your group.
 
-## Section A: For Students WITHOUT Prior Coding Experience (Using Julius)
+## Section A: For Students WITHOUT Prior Coding Experience (Using ChatGPT)
 
-You will use Julius, an AI data analysis chat-based tool, to analyze your data and generate content for your report.
+You will use ChatGPT, an AI chat-based tool, to analyze your data and generate content for your report.
 
-1.  **Setup Julius:**
+1.  **Setup ChatGPT:**
 
-    -   Go to [Julius.ai](https://julius.ai/){target="_blank"} and sign up. Feel free to skip the initial onboarding flow. You can usually skip it by going to this URL: [https://julius.ai/chat](https://julius.ai/chat){target="_blank"}
+    -   Go to [chatgpt.com](https://chatgpt.com/){target="_blank"} and sign in (or create a free account if you don't already have one).
 
-    -   For a 2-week trial of premium features, at the top left of the page, click on the user profile dropdown menu and select "Account Settings"
-
-    ![](images/user_profile_dropdown.jpg){width="242"}
-
-    In the settings menu, click on **Account**, then under **Institutional Codes**, enter the code that will be provided by your instructor in class.
-
-    ![](images/institutional_code.jpg){width="365"}
-
-    -   Please do not share this code with anyone outside of the class.
-
-2.  **Starting Your Analysis in Julius:**
-
-    -   Start a new Chat "thread" in Julius.
-
-    ![](images/new_thread.jpg){width="245"}
-
-    -   **Select your tools:**
-
-        -   **R for Code Language:** Julius can use Python or R. At the top left of the window, select **R** since the GRAPH team is more familiar with R, and the instructions below are written for R.
-
-    ![](images/change_code_language.jpg){width="292"}
-
-    -   **Claude 4.5 Sonnet for AI Model:** It's recommended to switch to the **Claude 4.5 Sonnet** model for potentially better results. The model selection is typically in a dropdown menu at the bottom right of the prompt input box.
+    -   **Select the thinking model:** In the model selector, choose the **thinking** model. This model handles multi-step data analysis tasks more reliably than the instant model.
 
     ![](images/change_ai_model.jpg){width="349"}
 
-3.  **Chatting with Julius:**
+    -   **If you don't have access to the thinking model:** The thinking model usually requires a paid plan. If you don't have access, share your email address with one of the instructors and we will add you to our workspace for one month so that you can complete this workshop.
 
-    -   First, upload your two CSV files to the conversation. This ensures Julius has access to your data when you give it instructions. You can drag and drop them in, of you can click on the plus button to the bottom left of the chat window and select "Upload file".
+2.  **Starting Your Analysis in ChatGPT:**
 
-    ![](images/upload_file.jpg){width="270"}
+    -   Start a new chat in ChatGPT.
 
-    -   Now we will write a prompt to Julius to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to Julius. The parts in square brackets should be replaced with your actual indicator names.
+3.  **Chatting with ChatGPT:**
 
-    ```         
-    I am writing a report on the relationship between two indicators 
+    -   First, upload your two CSV files to the conversation. This ensures ChatGPT has access to your data when you give it instructions. You can drag and drop them in, or you can click on the attachment (paperclip or "+") button near the chat input and select your two CSV files.
+
+    -   Now we will write a prompt to ChatGPT to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to ChatGPT. The parts in square brackets should be replaced with your actual indicator names.
+
+    ```
+    I am writing a report on the relationship between two indicators
 
     1. [TYPE YOUR INDICATOR 1 NAME HERE]
     2. [TYPE YOUR INDICATOR 2 NAME HERE]
 
-    Both datasets have been added. 
+    Both datasets have been added.
 
     Run the following steps for the report:
-    1. For each indicator, briefly view and print the data to understand it first. 
+    1. For each indicator, briefly view and print the data to understand it first.
     2. Then subset the data to 2020.
-    3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
+    3. Create a world map for each indicator in 2020. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
     4. Create a scatterplot showing the relationship between these two indicators in 2020.
     5. Provide a brief interpretation of the relationship between the two indicators.
     ```
 
--   **Review and Refine:** Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. For example, you can ask it to change the title of a plot, or to use a different color scheme.
+-   **Review and Refine:** ChatGPT will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. For example, you can ask it to change the title of a plot, or to use a different color scheme.
 
--   If the AI seems to be going off track or taking too long, look for a square "stop" button (often near the prompt input box) to interrupt it.
+-   If the AI seems to be going off track or taking too long, look for a "stop" button (often near the prompt input box) to interrupt it.
 
 4.  **Creating Your Report Document:**
-    -   **Download Outputs:** Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that Julius generates. You can also copy any key text outputs, such as data summaries or interpretations.
+    -   **Download Outputs:** Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that ChatGPT generates. You can also copy any key text outputs, such as data summaries or interpretations.
     -   **Create a DOCX/Google Docs file:** Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.
     -   **Assemble report:**
         -   Add a title, your name, and the date.
         -   Insert the plots you downloaded.
-        -   Paste in the relevant text outputs from Julius.
+        -   Paste in the relevant text outputs from ChatGPT.
         -   Organize this content into a clean and readable report.
 5.  **Add Your Reflection:**
     -   Before finalizing your report, add your short reflection written by you (not the AI) about the process of interacting with the AI tools. E.g. What was easy? What was difficult? What was surprising? What did you learn?
@@ -134,7 +117,7 @@ You will use Cursor to generate an R Markdown report. Cursor is an AI-powered co
 
     -   You'll need to set up Cursor first, using the instructions.
 
-    -   Note: Users in a few countries appear unable to access Cursor at the moment. You may need to use a VPN if this is the case. Or switch to the Julius track.
+    -   Note: Users in a few countries appear unable to access Cursor at the moment. You may need to use a VPN if this is the case. Or switch to the ChatGPT track.
 
     -   **Watch our setup video before you begin:** [AI Automated Data Analysis with R and Cursor (for R users only)](https://thegraphcourses.org/courses/aiw-2025-q2/topics/ai-automated-data-analysis-with-r-and-cursor-for-r-users-only/){target="_blank"}
 
@@ -152,7 +135,7 @@ You will use Cursor to generate an R Markdown report. Cursor is an AI-powered co
 
     -   **Initial Agent Prompt Idea:** Here is an example of an initial agent prompt:
 
-        ```         update 
+        ``` update
         You are an AI agent that creates R data reports.
         You create reports by writing code to an Rmarkdown file (with github_document output), knitting that file, then reading the output md file to validate your work.
         You repeat this edit, knit, review loop until the reporting task is achieved.

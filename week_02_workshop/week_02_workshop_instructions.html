@@ -83,7 +83,7 @@ window.Quarto = {
   <li><a href="#part-1-general-setup-data-selection-all-students" id="toc-part-1-general-setup-data-selection-all-students" class="nav-link" data-scroll-target="#part-1-general-setup-data-selection-all-students">Part 1: General Setup &amp; Data Selection (All Students)</a></li>
   <li><a href="#part-2-tool-specific-instructions" id="toc-part-2-tool-specific-instructions" class="nav-link" data-scroll-target="#part-2-tool-specific-instructions">Part 2: Tool-Specific Instructions</a>
   <ul class="collapse">
-  <li><a href="#section-a-for-students-without-prior-coding-experience-using-julius" id="toc-section-a-for-students-without-prior-coding-experience-using-julius" class="nav-link" data-scroll-target="#section-a-for-students-without-prior-coding-experience-using-julius">Section A: For Students WITHOUT Prior Coding Experience (Using Julius)</a></li>
+  <li><a href="#section-a-for-students-without-prior-coding-experience-using-chatgpt" id="toc-section-a-for-students-without-prior-coding-experience-using-chatgpt" class="nav-link" data-scroll-target="#section-a-for-students-without-prior-coding-experience-using-chatgpt">Section A: For Students WITHOUT Prior Coding Experience (Using ChatGPT)</a></li>
   <li><a href="#section-b-for-students-with-r-coding-experience-using-cursor-with-r" id="toc-section-b-for-students-with-r-coding-experience-using-cursor-with-r" class="nav-link" data-scroll-target="#section-b-for-students-with-r-coding-experience-using-cursor-with-r">Section B: For Students WITH R Coding Experience (Using Cursor with R)</a></li>
   </ul></li>
   <li><a href="#part-3-submission" id="toc-part-3-submission" class="nav-link" data-scroll-target="#part-3-submission">Part 3: Submission</a></li>
@@ -144,7 +144,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="tool-tracks">Tool Tracks</h2>
 <p>You will choose one of the following tools based on your coding experience:</p>
 <ul>
-<li><p><strong>Students WITHOUT significant coding experience:</strong> You will use <strong>Julius</strong>, a user-friendly AI data analysis tool with a chat interface.</p></li>
+<li><p><strong>Students WITHOUT significant coding experience:</strong> You will use <strong>ChatGPT</strong>, a user-friendly AI chat tool, with its data analysis capabilities.</p></li>
 <li><p><strong>Students WITH significant coding experience in R:</strong> You should use <strong>Cursor</strong>, an AI-powered code editor, with R.</p></li>
 <li><p><strong>If you finish your assigned tool track early, you are encouraged to try the other one!</strong></p></li>
 </ul>
@@ -174,73 +174,56 @@ window.Quarto = {
 <section id="part-2-tool-specific-instructions" class="level1">
 <h1>Part 2: Tool-Specific Instructions</h1>
 <p>Please follow the instructions for the tool assigned to your group.</p>
-<section id="section-a-for-students-without-prior-coding-experience-using-julius" class="level2">
-<h2 class="anchored" data-anchor-id="section-a-for-students-without-prior-coding-experience-using-julius">Section A: For Students WITHOUT Prior Coding Experience (Using Julius)</h2>
-<p>You will use Julius, an AI data analysis chat-based tool, to analyze your data and generate content for your report.</p>
+<section id="section-a-for-students-without-prior-coding-experience-using-chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="section-a-for-students-without-prior-coding-experience-using-chatgpt">Section A: For Students WITHOUT Prior Coding Experience (Using ChatGPT)</h2>
+<p>You will use ChatGPT, an AI chat-based tool, to analyze your data and generate content for your report.</p>
 <ol type="1">
-<li><p><strong>Setup Julius:</strong></p>
+<li><p><strong>Setup ChatGPT:</strong></p>
 <ul>
-<li><p>Go to <a href="https://julius.ai/" target="_blank">Julius.ai</a> and sign up. Feel free to skip the initial onboarding flow. You can usually skip it by going to this URL: <a href="https://julius.ai/chat" target="_blank">https://julius.ai/chat</a></p></li>
-<li><p>For a 2-week trial of premium features, at the top left of the page, click on the user profile dropdown menu and select “Account Settings”</p></li>
+<li><p>Go to <a href="https://chatgpt.com/" target="_blank">chatgpt.com</a> and sign in (or create a free account if you don’t already have one).</p></li>
+<li><p><strong>Select the thinking model:</strong> In the model selector, choose the <strong>thinking</strong> model. This model handles multi-step data analysis tasks more reliably than the instant model.</p></li>
 </ul>
-<p><img src="images/user_profile_dropdown.jpg" class="img-fluid" width="242"></p>
-<p>In the settings menu, click on <strong>Account</strong>, then under <strong>Institutional Codes</strong>, enter the code that will be provided by your instructor in class.</p>
-<p><img src="images/institutional_code.jpg" class="img-fluid" width="365"></p>
+<p><img src="images/change_ai_model.jpg" class="img-fluid" width="349"></p>
 <ul>
-<li>Please do not share this code with anyone outside of the class.</li>
+<li><strong>If you don’t have access to the thinking model:</strong> The thinking model usually requires a paid plan. If you don’t have access, share your email address with one of the instructors and we will add you to our workspace for one month so that you can complete this workshop.</li>
 </ul></li>
-<li><p><strong>Starting Your Analysis in Julius:</strong></p>
+<li><p><strong>Starting Your Analysis in ChatGPT:</strong></p>
 <ul>
-<li>Start a new Chat “thread” in Julius.</li>
-</ul>
-<p><img src="images/new_thread.jpg" class="img-fluid" width="245"></p>
-<ul>
-<li><p><strong>Select your tools:</strong></p>
-<ul>
-<li><strong>R for Code Language:</strong> Julius can use Python or R. At the top left of the window, select <strong>R</strong> since the GRAPH team is more familiar with R, and the instructions below are written for R.</li>
+<li>Start a new chat in ChatGPT.</li>
 </ul></li>
-</ul>
-<p><img src="images/change_code_language.jpg" class="img-fluid" width="292"></p>
+<li><p><strong>Chatting with ChatGPT:</strong></p>
 <ul>
-<li><strong>Claude 4.5 Sonnet for AI Model:</strong> It’s recommended to switch to the <strong>Claude 4.5 Sonnet</strong> model for potentially better results. The model selection is typically in a dropdown menu at the bottom right of the prompt input box.</li>
+<li><p>First, upload your two CSV files to the conversation. This ensures ChatGPT has access to your data when you give it instructions. You can drag and drop them in, or you can click on the attachment (paperclip or “+”) button near the chat input and select your two CSV files.</p></li>
+<li><p>Now we will write a prompt to ChatGPT to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to ChatGPT. The parts in square brackets should be replaced with your actual indicator names.</p></li>
 </ul>
-<p><img src="images/change_ai_model.jpg" class="img-fluid" width="349"></p></li>
-<li><p><strong>Chatting with Julius:</strong></p>
-<ul>
-<li>First, upload your two CSV files to the conversation. This ensures Julius has access to your data when you give it instructions. You can drag and drop them in, of you can click on the plus button to the bottom left of the chat window and select “Upload file”.</li>
-</ul>
-<p><img src="images/upload_file.jpg" class="img-fluid" width="270"></p>
-<ul>
-<li>Now we will write a prompt to Julius to help us create a report on the relationship between two indicators. Edit the prompt below to include the names of your two indicators, then send it to Julius. The parts in square brackets should be replaced with your actual indicator names.</li>
-</ul>
-<pre><code>I am writing a report on the relationship between two indicators 
+<pre><code>I am writing a report on the relationship between two indicators
 
 1. [TYPE YOUR INDICATOR 1 NAME HERE]
 2. [TYPE YOUR INDICATOR 2 NAME HERE]
 
-Both datasets have been added. 
+Both datasets have been added.
 
 Run the following steps for the report:
-1. For each indicator, briefly view and print the data to understand it first. 
+1. For each indicator, briefly view and print the data to understand it first.
 2. Then subset the data to 2020.
-3. Create a world map for each indicator in 2020. Use ggplot2 and the maps package to create the plot. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
+3. Create a world map for each indicator in 2020. (Before making the map, check the data input to make sure it is in the correct format, with one row per country.)
 4. Create a scatterplot showing the relationship between these two indicators in 2020.
 5. Provide a brief interpretation of the relationship between the two indicators.</code></pre></li>
 </ol>
 <ul>
-<li><p><strong>Review and Refine:</strong> Julius will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. For example, you can ask it to change the title of a plot, or to use a different color scheme.</p></li>
-<li><p>If the AI seems to be going off track or taking too long, look for a square “stop” button (often near the prompt input box) to interrupt it.</p></li>
+<li><p><strong>Review and Refine:</strong> ChatGPT will show its steps, data, and plots. Work with it to refine the figures and text until you are happy with the output plots. For example, you can ask it to change the title of a plot, or to use a different color scheme.</p></li>
+<li><p>If the AI seems to be going off track or taking too long, look for a “stop” button (often near the prompt input box) to interrupt it.</p></li>
 </ul>
 <ol start="4" type="1">
 <li><strong>Creating Your Report Document:</strong>
 <ul>
-<li><strong>Download Outputs:</strong> Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that Julius generates. You can also copy any key text outputs, such as data summaries or interpretations.</li>
+<li><strong>Download Outputs:</strong> Download the individual plots (as images, e.g., PNG) or take screenshots of the plots that ChatGPT generates. You can also copy any key text outputs, such as data summaries or interpretations.</li>
 <li><strong>Create a DOCX/Google Docs file:</strong> Open a word processor (like Microsoft Word, Google Docs, or Pages) and create a new document.</li>
 <li><strong>Assemble report:</strong>
 <ul>
 <li>Add a title, your name, and the date.</li>
 <li>Insert the plots you downloaded.</li>
-<li>Paste in the relevant text outputs from Julius.</li>
+<li>Paste in the relevant text outputs from ChatGPT.</li>
 <li>Organize this content into a clean and readable report.</li>
 </ul></li>
 </ul></li>
@@ -261,7 +244,7 @@ Run the following steps for the report:
 <li><p><strong>Setup Cursor:</strong></p>
 <ul>
 <li><p>You’ll need to set up Cursor first, using the instructions.</p></li>
-<li><p>Note: Users in a few countries appear unable to access Cursor at the moment. You may need to use a VPN if this is the case. Or switch to the Julius track.</p></li>
+<li><p>Note: Users in a few countries appear unable to access Cursor at the moment. You may need to use a VPN if this is the case. Or switch to the ChatGPT track.</p></li>
 <li><p><strong>Watch our setup video before you begin:</strong> <a href="https://thegraphcourses.org/courses/aiw-2025-q2/topics/ai-automated-data-analysis-with-r-and-cursor-for-r-users-only/" target="_blank">AI Automated Data Analysis with R and Cursor (for R users only)</a></p></li>
 </ul></li>
 <li><p><strong>Project folder:</strong></p>
