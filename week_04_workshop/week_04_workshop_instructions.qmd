@@ -32,23 +32,21 @@ Also note that the free account will allow your chatbots to send/receive up to 5
 
     -   Sign up for a free account using your email.
 
-    -   Verify your email address if needed. (Botpress will send you a verification email to your inbox.)
+    -   You may be asked what is your main use case. You can select "Other" and say anything random.
 
-    -   When you first sign up, you may be taken to a screen like the below asking whether you want to "build with AI" or let the Botpress team build for you. Select "build with AI".
+        ![](images/main_use_case.jpg){width="500"}
 
-        ![](images/build_with_ai.jpg){width="331"}
+    -   If asked "How do you want to build?", select Botpress Studio
 
-    -   You will then be asked "How do you want to build?" Select "Botpress Studio" on the left.
+        ![](images/how_to_build.jpg){width="331"}
 
-        ![](images/select_botpress_studio.jpg){width="500"}
-
-    -   You will then see a "Setup" screen that tries to walk you through the setup process. This is not needed. We will set up our bot from scratch. Click on "Skip" at the top right.
+    -   You will then see a "What should your bot do" screen that tries to walk you through the setup process. This is not needed.Click skip setup at the top right.
 
         ![](images/skip_setup.jpg){width="536"}
 
-    -   You may also see a "Pick your plan" popup. You don't need to select a paid plan. Simply click anywhere outside the box to dismiss it.
+    -   Next, click on the Home icon at the top left to view the home page for the bot instructions.
 
-        ![](images/click_to_exit_payment_plans.jpg){width="450"}
+        ![](images/home_button.jpg){width="198"}
 
 # Part 2: Setting Up the Bot Instructions
 
@@ -69,8 +67,8 @@ You are a portfolio assistant for a Generative AI course student. Your main task
 - Provide information about the Graph Courses GenAI syllabus and curriculum based on your knowledge base
 - After answering the user's query, politely ask them whether they might be interested in our upcoming showcase event. These take place on 
 
--  Sunday, March 8, 5pm GMT
--  Wednesday, March 11, 3pm GMT
+-  Sunday, June 28, 5pm GMT
+-  Wednesday, July 1, 3pm GMT
 
 - If they express interest, collect their name and email for registration and record those in the Attendees table tool.
 - Try to be helpful while staying focused on these core topics. For other topics, politely decline to answer. 
@@ -142,7 +140,6 @@ Now, we have created the table, we need to allow the bot to use this table to st
 
     ![](images/publish_button.jpg){width="340"}
 
-
 3.  **Get Embedding Code:**
 
     -   After publishing, click on the "Chat Bubble" icon under the Publish menu.
@@ -153,6 +150,10 @@ Now, we have created the table, we need to allow the bot to use this table to st
     -   Next, navigate to the "Share" menu and copy the code under "Embed Code"
 
     ![](images/embed_code.jpg){width="613"}
+
+    -   Side note: Later you can come back to the "bot appearance" section to customize how your bot looks.
+
+    ![](images/customize_bot_appearance.jpg){width="343"}
 
 # Part 6: Embedding Your Bot on Your Website
 
@@ -178,14 +179,16 @@ Now, we need to add this code to your portfolio website, so that a chat bubble a
 
         ![](images/edit_file_button.jpg){width="452"}
 
-2.  **Insert the Bot Code:**
+3.  **Insert the Bot Code:**
+
     -   Next, add the Webchat embed code to the head section of your website’s HTML. For example:
 
         ![](images/add_to_head_section.jpg){width="456"}
 
     -   If you do not feel comfortable making this change yourself, you can ask an LLM to do it for you.
 
-3.  **Commit and Deploy:**
+4.  **Commit and Deploy:**
+
     -   Save your changes to the `index.html` file
     -   Commit the changes to your GitHub repository
     -   Your live site will update automatically (this may take 3-5 minutes)
