@@ -290,7 +290,7 @@ For each new submission, I want a report of genAI opportunities for the client's
 
 First, our automation should research the company, using Google search, returning 3 results.
 
-Then we will use Gemini Flash to draft a report. The report should be rich, colorful, and professional.
+Then we will use Gemini 3.1 Flash Lite to draft a report. The report should be rich, colorful, and professional.
 
 The report file should be created with the plain text file tool, but with an HTML extension.
 
@@ -311,7 +311,7 @@ Note
 <p><strong>Why these specifications?</strong> You’ll learn to write prompts like this over time. Here’s the reasoning behind a few of the choices:</p>
 <ul>
 <li><strong>“returning 3 results”</strong>: The Google Search step defaults to about 5 results, which uses more AI credits than we need for this task. Two or three results is plenty.</li>
-<li><strong>“Gemini Flash”</strong>: If you don’t specify a model, Relay.app may default to a larger model like Anthropic’s Opus or Sonnet, which is more powerful but also more expensive. The free plan only gives you <strong>500 AI credits</strong>, so it’s worth being deliberate about which model you use. Gemini Flash is fast, cheap, and capable enough for this task.</li>
+<li><strong>“Gemini 3.1 Flash Lite”</strong>: If you don’t specify a model, Relay.app may default to a larger model like Anthropic’s Opus or Sonnet, which is more powerful but also more expensive. The free plan only gives you <strong>500 AI credits</strong>, so it’s worth being deliberate about which model you use. Gemini 3.1 Flash Lite is fast, cheap, and capable enough for this task.</li>
 <li><strong>“email yourself tool (not gmail)”</strong>: Relay.app has a built-in “Email Yourself” tool that lets you send an email to your own address without needing to connect your Google/Gmail account. This keeps things simple.</li>
 </ul>
 </div>
@@ -434,7 +434,7 @@ Note
 <p><img src="images/step_1_new_row_trigger.jpg" class="img-fluid" alt="Step 1: New row trigger" width="640"></p>
 <p><strong>Step 2: Research company.</strong> A Google search is run using the company name from the form, returning 2 to 3 results.</p>
 <p><img src="images/step_2_research_company.jpg" class="img-fluid" alt="Step 2: Research company" width="633"></p>
-<p><strong>Step 3: Draft GenAI opportunities report.</strong> Gemini Flash drafts a plain text (HTML)report based on the search results, with sections covering an executive summary, company overview and top GenAI opportunities.</p>
+<p><strong>Step 3: Draft GenAI opportunities report.</strong> Gemini 3.1 Flash Lite drafts a plain text (HTML)report based on the search results, with sections covering an executive summary, company overview and top GenAI opportunities.</p>
 <p><img src="images/step_3_ai_drafter.jpg" class="img-fluid" alt="Step 3: AI drafter" width="633"></p>
 <p><strong>Step 4: Create HTML report file.</strong> The AI output is saved as a plain text file with an <code>.html</code> extension, named after the client.</p>
 <p><img src="images/step_4_create_text_file_with_html_extension.jpg" class="img-fluid" alt="Step 4: Create text file with HTML extension" width="659"></p>
@@ -611,7 +611,7 @@ Tip
 
 [PASTE YOUR PUBMED RSS URL HERE]
 
-Using Gemini Flash, summarize each one in a single line and include the link to the full publication.
+Using Gemini 3.1 Flash Lite, summarize each one in a single line and include the link to the full publication.
 
 Then, at the end of the report, using my CV summary below as context,
 mention a few ways any of these publications might be relevant to my own work.
