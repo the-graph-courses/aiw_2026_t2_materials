@@ -404,7 +404,7 @@ To submit, take a screenshot of the workflow and upload it to the submission box
 
 ------------------------------------------------------------------------
 
-## Optional: Add Your Report to Your Portfolio
+# Optional: Add Your Report to Your Portfolio
 
 If you received an HTML report from the automation, you can add it to your GitHub Pages portfolio website under a section for this week's workshop.
 
@@ -437,7 +437,7 @@ The portfolio website is hosted at
 
 ---
 
-I want to add a new link for the project page for "Workshop 5: Automation with Relay.app".
+I want to add a new link and description for the project page for "Workshop 5: Automation with Relay.app".
 
 For this project, I built an automated workflow that processes consultation form submissions, researches the client's company, and generates a professional GenAI opportunities report.
 
