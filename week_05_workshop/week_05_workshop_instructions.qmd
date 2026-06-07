@@ -23,7 +23,9 @@ You'll build this using [Relay.app](https://relay.app){target="_blank"}, an auto
 ::: callout-tip
 ## Consulting? Me?
 
-You may be thinking "I'm not qualified to be a GenAI consultant!". But by now you have a solid understanding of how large language models work and what they can do. That puts you in probably the **top 5% of people** in terms of GenAI literacy, which means you could, in theory, act as a consultant in your own field, helping others figure out how to use these tools effectively.
+You may be thinking "I'm not qualified to be a GenAI consultant!". But by now you have a decent understanding of how large language models work and what they can do. And you're familiar with a range of tools for putting them into practice.
+
+That puts you in probably the **top 5% of people** in terms of GenAI literacy in most fields.
 
 :::
 
@@ -34,7 +36,11 @@ You may be thinking "I'm not qualified to be a GenAI consultant!". But by now yo
 ::: callout-tip
 ## A note on privacy and permissions
 
-Setting up this automation will involve granting Relay.app access to your Google Drive and Google Sheets so it can read form responses and run the workflow. Relay.app is a trusted service that we have vetted, and only actions you explicitly set up will be taken: it won't read or modify anything else in your account. If you're still concerned though, you may want to create a separate Google account for this workshop.
+Setting up this automation will involve granting Relay.app access to your Google Drive and Google Sheets. 
+
+Relay.app is a trusted service that we have vetted, and only actions you explicitly set up will be taken: it won't read or modify anything else in your account. 
+
+If you're still concerned though, you may want to create a separate Google account for this workshop.
 :::
 
 ## Create Your Project Folder
@@ -51,7 +57,7 @@ Setting up this automation will involve granting Relay.app access to your Google
 
 ## Build Your Consultation Form
 
-1.  Inside the folder, click **New** → **Google Forms**. You can close the Gemini quickstart helper if that pops up. 
+1.  Inside the folder, click **New** → **Google Forms** → **Blank Form**. You can close the Gemini quickstart helper if that pops up. 
 
 2.  In the title field enter: `Consultation Inquiry`
 
@@ -143,7 +149,7 @@ Finally, an email should be sent to me using the email yourself tool (not gmail)
 **Why these specifications?** You'll learn to write prompts like this over time. Here's the reasoning behind a few of the choices:
 
 -   **"returning 3 results"**: The Google Search step defaults to about 5 results, which uses more AI credits than we need for this task. Two or three results is plenty.
--   **"Gemini Flash"**: If you don't specify a model, Relay.app may default to a larger model like Anthropic's Sonnet, which is more powerful but also more expensive. The free plan only gives you **500 AI credits**, so it's worth being deliberate about which model you use. Gemini Flash is fast, cheap, and capable enough for th is task.
+-   **"Gemini Flash"**: If you don't specify a model, Relay.app may default to a larger model like Anthropic's Opus or Sonnet, which is more powerful but also more expensive. The free plan only gives you **500 AI credits**, so it's worth being deliberate about which model you use. Gemini Flash is fast, cheap, and capable enough for this task.
 -   **"email yourself tool (not gmail)"**: Relay.app has a built-in "Email Yourself" tool that lets you send an email to your own address without needing to connect your Google/Gmail account. This keeps things simple.
 
 :::
@@ -317,6 +323,87 @@ To submit your work, take a screenshot showing your completed workflow in Relay.
 
 ------------------------------------------------------------------------
 
+# Part 4: Optional Challenge: PubMed Literature Monitor *(ungraded)*
+
+Build an automation that monitors academic literature and sends you a weekly digest. You will:
+
+1.  Create a PubMed search query for a topic of your choice
+2.  Generate an RSS feed from that search
+3.  Build a Relay.app workflow that checks the feed every Monday, summarizes recent papers, and connects them to your research background
+
+::: callout-tip
+This challenge is less guided, with fewer screenshots. You'll need to be more independent.
+:::
+
+## Create Your PubMed RSS Feed
+
+### 1. Craft a search query
+
+PubMed searches use Boolean operators. You can write one yourself if you're familiar with the syntax, or use an LLM to help.
+
+Pick a topic, for example :
+
+-   Any paper about arboviruses in a top 5 medical journal
+-   Generative AI and epidemiology
+-   Clinical trials for a specific disease (e.g., malaria vaccine trials)
+
+Ask an LLM to help you craft the query. For example:
+
+```         
+Help me create a PubMed search query using Boolean operators.
+Return just the query string I can paste into PubMed.
+I will use this to create a weekly RSS feed eventually.
+The topic is:
+[YOUR TOPIC HERE]
+```
+
+Replace `[YOUR TOPIC HERE]` with the topic you picked. The model will respond with a query string you can copy.
+
+### 2. Search PubMed and create the RSS feed
+
+1.  Go to [pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov){target="_blank"}, paste your query into the search box, and press **Search**.
+
+::: callout-tip
+Aim for 100 to 1,000 total results. Too broad gives generic papers; too narrow means you will probably get nothing new each week. Check the result count and refine with the LLM if needed.
+:::
+
+2.  Just below the search bar, click the **Create RSS** link.
+
+![Figure: Create RSS button on PubMed.](images/create_rss_button.jpg){fig-alt="Create RSS button on PubMed" width="539"}
+
+3.  Change *Number of items displayed* to **10**, then click **Create RSS**. A URL appears in the *Your RSS Feed Link* box. Copy it.
+
+![Figure: RSS feed settings.](images/rss_settings.jpg){fig-alt="RSS feed settings" width="629"}
+
+## Build the Relay.app Workflow
+
+1.  Create a new workflow in Relay.app as you did before.
+
+2.  Paste the prompt below into the AI assistant, replacing the placeholders with your RSS URL and a short summary of your professional background (you can use an LLM to summarize your CV).
+
+```         
+Every Monday morning, we want to get the latest 10 publications from this RSS feed:
+
+[PASTE YOUR PUBMED RSS URL HERE]
+
+Using Gemini Flash, summarize each one in a single line and include the link to the full publication.
+
+Then, at the end of the report, using my CV summary below as context,
+mention a few ways any of these publications might be relevant to my own work.
+
+Send the whole thing to me using the Email Yourself tool (not Gmail).
+
+My professional background:
+
+[PASTE YOUR OWN PROFESSIONAL BACKGROUND HERE]
+```
+
+3.  Review the steps, run a test, and if the output looks good, activate the workflow. You'll now get a literature digest every Monday morning.
+
+To submit, take a screenshot of the workflow and upload it to the submission box on the course website.
+
+------------------------------------------------------------------------
+
 ## Optional: Add Your Report to Your Portfolio
 
 If you received an HTML report from the automation, you can add it to your GitHub Pages portfolio website under a section for this week's workshop.
@@ -416,84 +503,3 @@ Below is my current HTML file:
     ![](images/pages_build.jpg){width="353"}
 
 -   After the build is complete, your live site, if refreshed, should now show the new project entry and the link should work!
-
-------------------------------------------------------------------------
-
-# Part 4: Optional Challenge: PubMed Literature Monitor *(ungraded)*
-
-Build an automation that monitors academic literature and sends you a weekly digest. You will:
-
-1.  Create a PubMed search query for a topic of your choice
-2.  Generate an RSS feed from that search
-3.  Build a Relay.app workflow that checks the feed every Monday, summarizes recent papers, and connects them to your research background
-
-::: callout-tip
-This challenge is less guided, with fewer screenshots. You'll need to be more independent.
-:::
-
-## Create Your PubMed RSS Feed
-
-### 1. Craft a search query
-
-PubMed searches use Boolean operators. You can write one yourself if you're familiar with the syntax, or use an LLM to help.
-
-Pick a topic, for example :
-
--   Any paper about arboviruses in a top 5 medical journal
--   Generative AI and epidemiology
--   Clinical trials for a specific disease (e.g., malaria vaccine trials)
-
-Ask an LLM to help you craft the query. For example:
-
-```         
-Help me create a PubMed search query using Boolean operators.
-Return just the query string I can paste into PubMed.
-I will use this to create a weekly RSS feed eventually.
-The topic is:
-[YOUR TOPIC HERE]
-```
-
-Replace `[YOUR TOPIC HERE]` with the topic you picked. The model will respond with a query string you can copy.
-
-### 2. Search PubMed and create the RSS feed
-
-1.  Go to [pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov){target="_blank"}, paste your query into the search box, and press **Search**.
-
-::: callout-tip
-Aim for 100 to 1,000 total results. Too broad gives generic papers; too narrow means nothing new each week. Check the result count and refine with the LLM if needed.
-:::
-
-2.  Just below the search bar, click the **Create RSS** link.
-
-![Figure: Create RSS button on PubMed.](images/create_rss_button.jpg){fig-alt="Create RSS button on PubMed" width="539"}
-
-3.  Change *Number of items displayed* to **10**, then click **Create RSS**. A URL appears in the *Your RSS Feed Link* box. Copy it.
-
-![Figure: RSS feed settings.](images/rss_settings.jpg){fig-alt="RSS feed settings" width="629"}
-
-## Build the Relay.app Workflow
-
-1.  Create a new workflow in Relay.app as you did before.
-
-2.  Paste the prompt below into the AI assistant, replacing the placeholders with your RSS URL and a short summary of your professional background (you can use an LLM to summarize your CV).
-
-```         
-Every Monday morning, we want to get the latest 10 publications from this RSS feed:
-
-[PASTE YOUR PUBMED RSS URL HERE]
-
-Using Gemini Flash, summarize each one in a single line and include the link to the full publication.
-
-Then, at the end of the report, using my CV summary below as context,
-mention a few ways any of these publications might be relevant to my own work.
-
-Send the whole thing to me using the Email Yourself tool (not Gmail).
-
-My professional background:
-
-[PASTE YOUR OWN PROFESSIONAL BACKGROUND HERE]
-```
-
-3.  Review the steps, run a test, and if the output looks good, activate the workflow. You'll now get a literature digest every Monday morning.
-
-To submit, take a screenshot of the workflow and upload it to the submission box on the course website.

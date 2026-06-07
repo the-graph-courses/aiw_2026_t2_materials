@@ -24,16 +24,16 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="week_05_workshop_instructions_version_2_files/libs/clipboard/clipboard.min.js"></script>
-<script src="week_05_workshop_instructions_version_2_files/libs/quarto-html/quarto.js"></script>
-<script src="week_05_workshop_instructions_version_2_files/libs/quarto-html/popper.min.js"></script>
-<script src="week_05_workshop_instructions_version_2_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="week_05_workshop_instructions_version_2_files/libs/quarto-html/anchor.min.js"></script>
-<link href="week_05_workshop_instructions_version_2_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="week_05_workshop_instructions_version_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="week_05_workshop_instructions_version_2_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="week_05_workshop_instructions_version_2_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="week_05_workshop_instructions_version_2_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="week_05_workshop_instructions_files/libs/clipboard/clipboard.min.js"></script>
+<script src="week_05_workshop_instructions_files/libs/quarto-html/quarto.js"></script>
+<script src="week_05_workshop_instructions_files/libs/quarto-html/popper.min.js"></script>
+<script src="week_05_workshop_instructions_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="week_05_workshop_instructions_files/libs/quarto-html/anchor.min.js"></script>
+<link href="week_05_workshop_instructions_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="week_05_workshop_instructions_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="week_05_workshop_instructions_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="week_05_workshop_instructions_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="week_05_workshop_instructions_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -72,8 +72,15 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#test-the-full-pipeline" id="toc-test-the-full-pipeline" class="nav-link" data-scroll-target="#test-the-full-pipeline">Test the Full Pipeline</a></li>
   </ul></li>
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#part-4-optional-challenge-pubmed-literature-monitor-ungraded" id="toc-part-4-optional-challenge-pubmed-literature-monitor-ungraded" class="nav-link" data-scroll-target="#part-4-optional-challenge-pubmed-literature-monitor-ungraded">Part 4: Optional Challenge: PubMed Literature Monitor <em>(ungraded)</em></a>
   <ul class="collapse">
+  <li><a href="#create-your-pubmed-rss-feed" id="toc-create-your-pubmed-rss-feed" class="nav-link" data-scroll-target="#create-your-pubmed-rss-feed">Create Your PubMed RSS Feed</a>
+  <ul class="collapse">
+  <li><a href="#craft-a-search-query" id="toc-craft-a-search-query" class="nav-link" data-scroll-target="#craft-a-search-query">1. Craft a search query</a></li>
+  <li><a href="#search-pubmed-and-create-the-rss-feed" id="toc-search-pubmed-and-create-the-rss-feed" class="nav-link" data-scroll-target="#search-pubmed-and-create-the-rss-feed">2. Search PubMed and create the RSS feed</a></li>
+  </ul></li>
+  <li><a href="#build-the-relay.app-workflow" id="toc-build-the-relay.app-workflow" class="nav-link" data-scroll-target="#build-the-relay.app-workflow">Build the Relay.app Workflow</a></li>
   <li><a href="#optional-add-your-report-to-your-portfolio" id="toc-optional-add-your-report-to-your-portfolio" class="nav-link" data-scroll-target="#optional-add-your-report-to-your-portfolio">Optional: Add Your Report to Your Portfolio</a>
   <ul class="collapse">
   <li><a href="#upload-your-report-to-github" id="toc-upload-your-report-to-github" class="nav-link" data-scroll-target="#upload-your-report-to-github">Upload Your Report to GitHub</a></li>
@@ -83,15 +90,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#copy-your-current-index.html-code" id="toc-copy-your-current-index.html-code" class="nav-link" data-scroll-target="#copy-your-current-index.html-code">Copy Your Current index.html Code</a></li>
   <li><a href="#send-the-prompt-and-update-your-file" id="toc-send-the-prompt-and-update-your-file" class="nav-link" data-scroll-target="#send-the-prompt-and-update-your-file">Send the Prompt and Update Your File</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#part-4-optional-challenge-pubmed-literature-monitor-ungraded" id="toc-part-4-optional-challenge-pubmed-literature-monitor-ungraded" class="nav-link" data-scroll-target="#part-4-optional-challenge-pubmed-literature-monitor-ungraded">Part 4: Optional Challenge: PubMed Literature Monitor <em>(ungraded)</em></a>
-  <ul class="collapse">
-  <li><a href="#create-your-pubmed-rss-feed" id="toc-create-your-pubmed-rss-feed" class="nav-link" data-scroll-target="#create-your-pubmed-rss-feed">Create Your PubMed RSS Feed</a>
-  <ul class="collapse">
-  <li><a href="#craft-a-search-query" id="toc-craft-a-search-query" class="nav-link" data-scroll-target="#craft-a-search-query">1. Craft a search query</a></li>
-  <li><a href="#search-pubmed-and-create-the-rss-feed" id="toc-search-pubmed-and-create-the-rss-feed" class="nav-link" data-scroll-target="#search-pubmed-and-create-the-rss-feed">2. Search PubMed and create the RSS feed</a></li>
-  </ul></li>
-  <li><a href="#build-the-relay.app-workflow" id="toc-build-the-relay.app-workflow" class="nav-link" data-scroll-target="#build-the-relay.app-workflow">Build the Relay.app Workflow</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -144,7 +142,8 @@ Consulting? Me?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You may be thinking “I’m not qualified to be a GenAI consultant!”. But by now you have a solid understanding of how large language models work and what they can do. That puts you in probably the <strong>top 5% of people</strong> in terms of GenAI literacy, which means you could, in theory, act as a consultant in your own field, helping others figure out how to use these tools effectively.</p>
+<p>You may be thinking “I’m not qualified to be a GenAI consultant!”. But by now you have a decent understanding of how large language models work and what they can do. And you’re familiar with a range of tools for putting them into practice.</p>
+<p>That puts you in probably the <strong>top 5% of people</strong> in terms of GenAI literacy in most fields.</p>
 </div>
 </div>
 <hr>
@@ -161,7 +160,9 @@ A note on privacy and permissions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Setting up this automation will involve granting Relay.app access to your Google Drive and Google Sheets so it can read form responses and run the workflow. Relay.app is a trusted service that we have vetted, and only actions you explicitly set up will be taken: it won’t read or modify anything else in your account. If you’re still concerned though, you may want to create a separate Google account for this workshop.</p>
+<p>Setting up this automation will involve granting Relay.app access to your Google Drive and Google Sheets.</p>
+<p>Relay.app is a trusted service that we have vetted, and only actions you explicitly set up will be taken: it won’t read or modify anything else in your account.</p>
+<p>If you’re still concerned though, you may want to create a separate Google account for this workshop.</p>
 </div>
 </div>
 <section id="create-your-project-folder" class="level2">
@@ -185,7 +186,7 @@ A note on privacy and permissions
 <section id="build-your-consultation-form" class="level2">
 <h2 class="anchored" data-anchor-id="build-your-consultation-form">Build Your Consultation Form</h2>
 <ol type="1">
-<li><p>Inside the folder, click <strong>New</strong> → <strong>Google Forms</strong>. You can close the Gemini quickstart helper if that pops up.</p></li>
+<li><p>Inside the folder, click <strong>New</strong> → <strong>Google Forms</strong> → <strong>Blank Form</strong>. You can close the Gemini quickstart helper if that pops up.</p></li>
 <li><p>In the title field enter: <code>Consultation Inquiry</code></p></li>
 <li><p>Set up the following form questions:</p>
 <ul>
@@ -310,7 +311,7 @@ Note
 <p><strong>Why these specifications?</strong> You’ll learn to write prompts like this over time. Here’s the reasoning behind a few of the choices:</p>
 <ul>
 <li><strong>“returning 3 results”</strong>: The Google Search step defaults to about 5 results, which uses more AI credits than we need for this task. Two or three results is plenty.</li>
-<li><strong>“Gemini Flash”</strong>: If you don’t specify a model, Relay.app may default to a larger model like Anthropic’s Sonnet, which is more powerful but also more expensive. The free plan only gives you <strong>500 AI credits</strong>, so it’s worth being deliberate about which model you use. Gemini Flash is fast, cheap, and capable enough for th is task.</li>
+<li><strong>“Gemini Flash”</strong>: If you don’t specify a model, Relay.app may default to a larger model like Anthropic’s Opus or Sonnet, which is more powerful but also more expensive. The free plan only gives you <strong>500 AI credits</strong>, so it’s worth being deliberate about which model you use. Gemini Flash is fast, cheap, and capable enough for this task.</li>
 <li><strong>“email yourself tool (not gmail)”</strong>: Relay.app has a built-in “Email Yourself” tool that lets you send an email to your own address without needing to connect your Google/Gmail account. This keeps things simple.</li>
 </ul>
 </div>
@@ -521,6 +522,111 @@ Below is my current index.html code. Please return the FULL updated HTML file:
 <h1>Submission</h1>
 <p>To submit your work, take a screenshot showing your completed workflow in Relay.app (showing all the steps) and upload it to the submission box on the course website.</p>
 <hr>
+</section>
+<section id="part-4-optional-challenge-pubmed-literature-monitor-ungraded" class="level1">
+<h1>Part 4: Optional Challenge: PubMed Literature Monitor <em>(ungraded)</em></h1>
+<p>Build an automation that monitors academic literature and sends you a weekly digest. You will:</p>
+<ol type="1">
+<li>Create a PubMed search query for a topic of your choice</li>
+<li>Generate an RSS feed from that search</li>
+<li>Build a Relay.app workflow that checks the feed every Monday, summarizes recent papers, and connects them to your research background</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This challenge is less guided, with fewer screenshots. You’ll need to be more independent.</p>
+</div>
+</div>
+<section id="create-your-pubmed-rss-feed" class="level2">
+<h2 class="anchored" data-anchor-id="create-your-pubmed-rss-feed">Create Your PubMed RSS Feed</h2>
+<section id="craft-a-search-query" class="level3">
+<h3 class="anchored" data-anchor-id="craft-a-search-query">1. Craft a search query</h3>
+<p>PubMed searches use Boolean operators. You can write one yourself if you’re familiar with the syntax, or use an LLM to help.</p>
+<p>Pick a topic, for example :</p>
+<ul>
+<li>Any paper about arboviruses in a top 5 medical journal</li>
+<li>Generative AI and epidemiology</li>
+<li>Clinical trials for a specific disease (e.g., malaria vaccine trials)</li>
+</ul>
+<p>Ask an LLM to help you craft the query. For example:</p>
+<pre><code>Help me create a PubMed search query using Boolean operators.
+Return just the query string I can paste into PubMed.
+I will use this to create a weekly RSS feed eventually.
+The topic is:
+[YOUR TOPIC HERE]</code></pre>
+<p>Replace <code>[YOUR TOPIC HERE]</code> with the topic you picked. The model will respond with a query string you can copy.</p>
+</section>
+<section id="search-pubmed-and-create-the-rss-feed" class="level3">
+<h3 class="anchored" data-anchor-id="search-pubmed-and-create-the-rss-feed">2. Search PubMed and create the RSS feed</h3>
+<ol type="1">
+<li>Go to <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">pubmed.ncbi.nlm.nih.gov</a>, paste your query into the search box, and press <strong>Search</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Aim for 100 to 1,000 total results. Too broad gives generic papers; too narrow means you will probably get nothing new each week. Check the result count and refine with the LLM if needed.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Just below the search bar, click the <strong>Create RSS</strong> link.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/create_rss_button.jpg" class="img-fluid figure-img" alt="Create RSS button on PubMed" width="539"></p>
+<figcaption>Figure: Create RSS button on PubMed.</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Change <em>Number of items displayed</em> to <strong>10</strong>, then click <strong>Create RSS</strong>. A URL appears in the <em>Your RSS Feed Link</em> box. Copy it.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rss_settings.jpg" class="img-fluid figure-img" alt="RSS feed settings" width="629"></p>
+<figcaption>Figure: RSS feed settings.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="build-the-relay.app-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="build-the-relay.app-workflow">Build the Relay.app Workflow</h2>
+<ol type="1">
+<li><p>Create a new workflow in Relay.app as you did before.</p></li>
+<li><p>Paste the prompt below into the AI assistant, replacing the placeholders with your RSS URL and a short summary of your professional background (you can use an LLM to summarize your CV).</p></li>
+</ol>
+<pre><code>Every Monday morning, we want to get the latest 10 publications from this RSS feed:
+
+[PASTE YOUR PUBMED RSS URL HERE]
+
+Using Gemini Flash, summarize each one in a single line and include the link to the full publication.
+
+Then, at the end of the report, using my CV summary below as context,
+mention a few ways any of these publications might be relevant to my own work.
+
+Send the whole thing to me using the Email Yourself tool (not Gmail).
+
+My professional background:
+
+[PASTE YOUR OWN PROFESSIONAL BACKGROUND HERE]</code></pre>
+<ol start="3" type="1">
+<li>Review the steps, run a test, and if the output looks good, activate the workflow. You’ll now get a literature digest every Monday morning.</li>
+</ol>
+<p>To submit, take a screenshot of the workflow and upload it to the submission box on the course website.</p>
+<hr>
+</section>
 <section id="optional-add-your-report-to-your-portfolio" class="level2">
 <h2 class="anchored" data-anchor-id="optional-add-your-report-to-your-portfolio">Optional: Add Your Report to Your Portfolio</h2>
 <p>If you received an HTML report from the automation, you can add it to your GitHub Pages portfolio website under a section for this week’s workshop.</p>
@@ -606,112 +712,7 @@ Below is my current HTML file:
 <p><img src="images/pages_build.jpg" class="img-fluid" width="353"></p></li>
 <li><p>After the build is complete, your live site, if refreshed, should now show the new project entry and the link should work!</p></li>
 </ul>
-<hr>
 </section>
-</section>
-</section>
-<section id="part-4-optional-challenge-pubmed-literature-monitor-ungraded" class="level1">
-<h1>Part 4: Optional Challenge: PubMed Literature Monitor <em>(ungraded)</em></h1>
-<p>Build an automation that monitors academic literature and sends you a weekly digest. You will:</p>
-<ol type="1">
-<li>Create a PubMed search query for a topic of your choice</li>
-<li>Generate an RSS feed from that search</li>
-<li>Build a Relay.app workflow that checks the feed every Monday, summarizes recent papers, and connects them to your research background</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This challenge is less guided, with fewer screenshots. You’ll need to be more independent.</p>
-</div>
-</div>
-<section id="create-your-pubmed-rss-feed" class="level2">
-<h2 class="anchored" data-anchor-id="create-your-pubmed-rss-feed">Create Your PubMed RSS Feed</h2>
-<section id="craft-a-search-query" class="level3">
-<h3 class="anchored" data-anchor-id="craft-a-search-query">1. Craft a search query</h3>
-<p>PubMed searches use Boolean operators. You can write one yourself if you’re familiar with the syntax, or use an LLM to help.</p>
-<p>Pick a topic, for example :</p>
-<ul>
-<li>Any paper about arboviruses in a top 5 medical journal</li>
-<li>Generative AI and epidemiology</li>
-<li>Clinical trials for a specific disease (e.g., malaria vaccine trials)</li>
-</ul>
-<p>Ask an LLM to help you craft the query. For example:</p>
-<pre><code>Help me create a PubMed search query using Boolean operators.
-Return just the query string I can paste into PubMed.
-I will use this to create a weekly RSS feed eventually.
-The topic is:
-[YOUR TOPIC HERE]</code></pre>
-<p>Replace <code>[YOUR TOPIC HERE]</code> with the topic you picked. The model will respond with a query string you can copy.</p>
-</section>
-<section id="search-pubmed-and-create-the-rss-feed" class="level3">
-<h3 class="anchored" data-anchor-id="search-pubmed-and-create-the-rss-feed">2. Search PubMed and create the RSS feed</h3>
-<ol type="1">
-<li>Go to <a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">pubmed.ncbi.nlm.nih.gov</a>, paste your query into the search box, and press <strong>Search</strong>.</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Aim for 100 to 1,000 total results. Too broad gives generic papers; too narrow means nothing new each week. Check the result count and refine with the LLM if needed.</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Just below the search bar, click the <strong>Create RSS</strong> link.</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/create_rss_button.jpg" class="img-fluid figure-img" alt="Create RSS button on PubMed" width="539"></p>
-<figcaption>Figure: Create RSS button on PubMed.</figcaption>
-</figure>
-</div>
-<ol start="3" type="1">
-<li>Change <em>Number of items displayed</em> to <strong>10</strong>, then click <strong>Create RSS</strong>. A URL appears in the <em>Your RSS Feed Link</em> box. Copy it.</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/rss_settings.jpg" class="img-fluid figure-img" alt="RSS feed settings" width="629"></p>
-<figcaption>Figure: RSS feed settings.</figcaption>
-</figure>
-</div>
-</section>
-</section>
-<section id="build-the-relay.app-workflow" class="level2">
-<h2 class="anchored" data-anchor-id="build-the-relay.app-workflow">Build the Relay.app Workflow</h2>
-<ol type="1">
-<li><p>Create a new workflow in Relay.app as you did before.</p></li>
-<li><p>Paste the prompt below into the AI assistant, replacing the placeholders with your RSS URL and a short summary of your professional background (you can use an LLM to summarize your CV).</p></li>
-</ol>
-<pre><code>Every Monday morning, we want to get the latest 10 publications from this RSS feed:
-
-[PASTE YOUR PUBMED RSS URL HERE]
-
-Using Gemini Flash, summarize each one in a single line and include the link to the full publication.
-
-Then, at the end of the report, using my CV summary below as context,
-mention a few ways any of these publications might be relevant to my own work.
-
-Send the whole thing to me using the Email Yourself tool (not Gmail).
-
-My professional background:
-
-[PASTE YOUR OWN PROFESSIONAL BACKGROUND HERE]</code></pre>
-<ol start="3" type="1">
-<li>Review the steps, run a test, and if the output looks good, activate the workflow. You’ll now get a literature digest every Monday morning.</li>
-</ol>
-<p>To submit, take a screenshot of the workflow and upload it to the submission box on the course website.</p>
 </section>
 </section>
 
