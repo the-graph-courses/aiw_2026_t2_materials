@@ -23,19 +23,18 @@ You'll generate the initial flyer image with **Gemini**, then bring it into **Ca
 
 **Accounts Required**: You'll need a free **Google/Gemini** account (for [gemini.google.com](https://gemini.google.com/){target="_blank"}) and a free **Canva** account (sign up at **canva.com**).
 
-### 1-A (Optional) Sign up for Canva Pro Trial
-
-Later in this workshop, the "Magic Eraser" tool (used to clean up the image, e.g. removing the Gemini logo) requires Canva Pro. If you'd like to try it yourself, you can start a free Pro trial.
-
-This step is **optional**. If you'd rather not enter a credit card or sign up for the trial, that's okay; you can still do most of the workshop, and an instructor will demo Magic Eraser in the lesson.
+### 1-A Sign up for Canva
 
 1.  Go to [canva.com](https://www.canva.com/){target="_blank"} and sign up for an account or log in.
 2.  At sign-up, you will be asked whether you are interested in the free plan or the Pro plan. 
+
 3.  Optionally select the Pro plan and start the free trial. You will not be charged if you cancel before the trial period ends.
 
 ![Canva Pro free trial](images/pro_trial.jpg){width="382"}
 
 4. Select the **monthly** billing option before starting the trial. 
+
+(If you'd rather not enter a credit card or sign up for the trial, that's okay; you can still do most of the workshop.)
 
 5.  Once you have started the trial, go to your account settings and find "Billing & Teams" or visit [https://www.canva.com/settings/billing-and-teams](https://www.canva.com/settings/billing-and-teams){target="_blank"} and click "Cancel plan".
 
@@ -60,7 +59,7 @@ Prompt to paste:
 Create an elegant, modern, abstract, minimalist flyer in 3:4 portrait dimensions for the following event:
 ► Main headline: "Generative AI for Work & Research: AI Portfolio Showcase Day".
 ► Sub-headline: "Join us to see how our cohort of AI learners are putting their skills to work".
-► Date and Time: Sunday, March 8, 5pm GMT or Wednesday, March 11, 3pm GMT
+► Date and Time: Sunday, June 28, 5pm GMT or Wednesday, July 1, 3pm GMT
 ► Incorporate these three theme colors: Dark teal, Light teal, and Gold.
 ► Leave some empty space in one corner for a QR code that we will add later.
 ► To sign up, visit https://forms.gle/n9Xf8ocLd6JtWXUZA
