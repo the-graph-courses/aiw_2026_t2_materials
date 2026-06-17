@@ -309,7 +309,7 @@ Now test the entire pipeline end to end.
 
 1.  Visit your live GitHub Pages site and fill out the consultation form. Use a different company name than your earlier test so you can identify the new submission.
 
-2.  Wait a minute or two for Relay.app to pick it up (it uses event-based triggers, so it should be quick).
+2.  Wait for Relay.app to pick up the new submission. Note that this can take sometime, up to 15 minutes. (When you tested the workflow manually in Relay.app, it ran right away. But with the live trigger enabled, Relay.app checks your spreadsheet for new rows on a schedule rather than instantly.)
 
 3.  Check your email for the report and review the HTML attachment.
 
