@@ -21,26 +21,9 @@ In this session you will try two small but practical GenAI design workflows:
 
 You'll generate the initial flyer image with **Gemini**, then bring it into **Canva** to fix the text and finalize it.
 
-**Accounts Required**: You'll need a free **Google/Gemini** account (for [gemini.google.com](https://gemini.google.com/){target="_blank"}) and a free **Canva** account (sign up at **canva.com**).
+**Accounts Required**: You'll need a free **Google/Gemini** account (for [gemini.google.com](https://gemini.google.com/){target="_blank"}) and a free **Canva** account.
 
-### 1-A Sign up for Canva
-
-1.  Go to [canva.com](https://www.canva.com/){target="_blank"} and sign up for an account or log in.
-2.  At sign-up, you will be asked whether you are interested in the free plan or the Pro plan. 
-
-3.  Optionally select the Pro plan and start the free trial. You will not be charged if you cancel before the trial period ends.
-
-![Canva Pro free trial](images/pro_trial.jpg){width="382"}
-
-4. Select the **monthly** billing option before starting the trial. 
-
-(If you'd rather not enter a credit card or sign up for the trial, that's okay; you can still do most of the workshop.)
-
-5.  Once you have started the trial, go to your account settings and find "Billing & Teams" or visit [https://www.canva.com/settings/billing-and-teams](https://www.canva.com/settings/billing-and-teams){target="_blank"} and click "Cancel plan".
-
-![Canva cancel plan button](images/canva_cancel_plan.jpg){width="540"}
-
-### 1-B Generate the Flyer Image in Gemini
+### 1-A Generate the Flyer Image in Gemini
 
 For generating the flyer image, we will use Gemini, as it a decent free model for image generation. ChatGPT is also an option if you prefer it.
 
@@ -56,62 +39,50 @@ For generating the flyer image, we will use Gemini, as it a decent free model fo
 
 Prompt to paste:
 ```
-Create an elegant, modern, abstract, minimalist flyer in 3:4 portrait dimensions for the following event:
+Create a modern, rich, professional flyer in 3:4 portrait dimensions for the following event:
 ► Main headline: "Generative AI for Work & Research: AI Portfolio Showcase Day".
-► Sub-headline: "Join us to see how our cohort of AI learners are putting their skills to work".
 ► Date and Time: Sunday, June 28, 5pm GMT or Wednesday, July 1, 3pm GMT
-► Incorporate these three theme colors: Dark teal, Light teal, and Gold.
+► Incorporate these two theme colors: [#e5b44e], [#3a6c83].
 ► Leave some empty space in one corner for a QR code that we will add later.
-► To sign up, visit https://forms.gle/n9Xf8ocLd6JtWXUZA
+► Include some lorem ipsum text that I will replace later.
 
 ```
 
-
 4.  Press Enter to generate.
 
-5.  Your initial image may be perfect, but usually there are a few things you would like to change. You could make these changes in conversation with the models, but, especially for text-based elements, this can get tedious quickly. It is sometimes easier to bring the image into a proper image editor where you can edit specific regions. That's what we'll do next with **Canva**.
+5.  If you're unhappy with the design elements of the generation, you can ask the model to make changes. For text-based elements and finishing touches, rather than asking the model to make changes, it is often easier to bring the image into a proper image editor where you can edit specific regions, collaborate with others, and finalize the text. That's what we'll do next with **Canva**.
 
 6.  Once you're relatively happy with an image, download it. Hover over the top-right corner of the image and click the **download** button. Make sure to download the image in **PNG** format.
 
-### 1-C Bring the Image into Canva
+### 1-B Bring the Image into Canva
 
-1.  In Canva, go to the **Projects** tab in the left sidebar.
+1.  Go to [canva.com](https://www.canva.com/){target="_blank"} and sign up for a free account or log in.
+
+2.  In Canva, go to the **Projects** tab in the left sidebar.
 
 ![Canva Projects tab](images/projects.jpg){width="320"}
 
-2.  Drag your downloaded flyer image into the empty space to upload it.
+3.  Drag your downloaded flyer image into the empty space to upload it.
 
-3.  Open the uploaded image, then click **"Open in editor"** at the top right.
+4.  Open the uploaded image, then click **"Open in editor"** at the top right.
 
 ![Open in editor](images/open_in_editor.jpg){width="400"}
 
-4.  In the editor, hover over the image and click the **"Edit"** button at the top left.
+5.  In the editor, hover over the image and click the **"Edit"** button at the top left.
 
 ![Canva edit photo button](images/canva_edit_photo_button.jpg){width="519"}
 
 This reveals the editing tools, including **Magic Layers**.
 
-### 1-D Fix the Text with Magic Layers
+### 1-C Fix the Text with Magic Layers
 
 1.  Click on the **Magic Layers** tool.
 
 ![Canva Magic Layers tool](images/magic_layers.jpg){width="500"}
 
-2.  Canva will separate the image into editable layers, including the text. You can now click on the text layers and fix any spelling or formatting errors.
+2.  Canva will separate the image into editable layers, including the text. You can now click on the text layers, edit (or remove) the Lorem ipsum (placeholder) text, and fix any spelling or formatting errors.
 
-### Optional: Clean up the image with Magic Eraser
-
-If you started the Canva Pro trial, you can use the **Magic Eraser** tool to remove the Gemini logo (usually in the bottom-right corner) and any other stray artifacts that you don't want in the background.
-
-1.  Select "Magic Eraser" from the editing tools.
-
-![Canva Magic Eraser tool](images/canva_magic_eraser.jpg){width="466"}
-
-2.  Adjust your brush size, paint over the logo or blemishes, and watch them disappear.
-
-![Canva Magic Eraser brush adjustment](images/canva_magic_eraser_brush.jpg){width="508"}
-
-### Recommended: Add a QR code
+### 1-D Add a QR code
 
 A QR code can make it easier for people to register for the showcase.
 
@@ -131,7 +102,7 @@ A QR code can make it easier for people to register for the showcase.
 2.  Select "Download", keep the file type as PNG, and click "Download" again.
 3.  Upload the downloaded PNG file to the assignment submission area on the course website.
 
-# Task 2: Optional Challenge : AI Visual Abstracts
+# Task 2 : AI Visual Abstracts
 
 In this section, we'll use AI and design tools to turn a research paper into a visual abstract. A visual abstract is a pictorial representation of the main findings of a research paper, and is a great way to communicate the key results of a paper in an appealing visual format.
 
@@ -186,6 +157,16 @@ If you want to make some custom edits, you can do so as follows.
 
 ------------------------------------------------------------------------
 
-### 2-D Share Your Work
+### 2-D Share Your Work as a Comment
 
 When you're finished, upload your visual abstract (PDF, screenshot, or exported file) as a comment on the workshop page. Include a link to the original paper in your comment. This optional challenge is not part of the assignment submission.
+
+# Task 3: Optional Challenge : Swap Out the Tools
+
+To experiment with these two visual styles (SVG code-based design vs image-based design), you can swap out the tools you used in Task 1 and Task 2.
+
+For Task 1, try to build a flyer using the SVG workflow above. 
+
+Then for Task 2, try to build a visual abstract using the image-based workflow above.
+
+Compare and contrast the approaches and results. What was easier? What was more difficult? What did you learn? You can share your thoughts in a comment on the workshop page.

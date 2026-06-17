@@ -39,6 +39,7 @@ The final presentation will be on either **Sunday, June 28, 5pm GMT** or **Wedne
     -   Wrap-up: limitations, reflections, and next steps using slides (~1 minute)
 3.  **Present live** in your assigned session (4 minutes total)
 4.  **Upload your slide deck** to the submission page.
+5.  **Leave a comment on the course page** if your project has a URL (for example, a live website, app, or hosted tool). Post the link in the comment box on the final project page so classmates and instructors can find it after your presentation.
 
 **Tip:** Have a backup plan (screenshots or a short recorded video) in case of technical difficulties during the live demo.
 
